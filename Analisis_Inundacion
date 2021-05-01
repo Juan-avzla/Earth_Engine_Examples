@@ -1,0 +1,52 @@
+// Anlalisis de Inundaciones en Google Earth Engine
+//http://www.gisandbeers.com/analisis-de-inundaciones-earth-engine-usando-datos-opticos/
+
+var Tiempo_1 = ee.ImageCollection ('COPERNICUS/S2')
+  .filterDate('2019-07-06' ,'2019-07-11')
+  .filterMetadata('CLOUDY_PIXEL_PERCENTAGE', 'Less_Than', 40);
+var Seco = Tiempo_1.reduce(ee.Reducer.median());
+
+var Tiempo_2 = ee.ImageCollection ('COPERNICUS/S2')
+  .filterDate('2019-09-13' ,'2019-09-14')
+  .filterMetadata('CLOUDY_PIXEL_PERCENTAGE', 'Less_Than', 40);
+var Inundacion = Tiempo_2.reduce(ee.Reducer.median());
+
+// Analizar la humedad a partir de las bandas B11 y B8
+var Humedad_2 = Inundacion.normalizedDifference (['B8_median', 'B11_median']);
+var Humedad_1 = Seco.normalizedDifference (['B8_median', 'B11_median']);
+
+
+// Asignar simbologia al valor de la humedad despues de la indundacion
+Map.addLayer(Humedad_2, {
+  min: -1.0,
+  max: 0.6,
+  palette: ['#0000ff', 'F1B555', '99B718', '66A000', '3E8601', 
+    '056201', '023B01', '011D01', 'blue']},
+  'Inundación');  
+
+// Asignar simbologia a los valores previos a la inundacion creando un widget
+// tipo persiana para visualizar ambas imagenes
+var Vinculacion_Mapas = ui.Map();
+
+Vinculacion_Mapas.addLayer(Humedad_1, {
+  min: -1.0,
+  max: 0.6,
+  palette: ['#0000ff', 'F1B555', '99B718', '66A000', '3E8601', 
+    '056201', '023B01', '011D01', 'blue']},
+    'Pre Inundacion');
+
+var SWIPE = ui.Map.Linker([ui.root.widgets().get(0), Vinculacion_Mapas]);
+var SWIPE_2 = ui.SplitPanel({
+  firstPanel: SWIPE.get(0),
+  secondPanel: SWIPE.get(1),
+  orientation: 'horizontal', //Horizontal o Vertical
+  wipe: true,
+  style: {stretch: 'both'}});
+ui.root.widgets().reset([SWIPE_2]);
+
+// Centrar la vista del mapa
+Vinculacion_Mapas.setCenter(-0.89, 37.73, 12);
+
+
+
+
