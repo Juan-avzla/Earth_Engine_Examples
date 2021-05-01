@@ -1,0 +1,48 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var geometry = 
+    /* color: #d63000 */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[-1.428463472452819, 41.988309412096164],
+          [-1.428463472452819, 41.67519652029039],
+          [-0.9642911091715689, 41.67519652029039],
+          [-0.9642911091715689, 41.988309412096164]]], null, false);
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// Exportacion de imagenes a  DRIVE
+
+// Importar libreria de imagenes
+var SENTINEL_2 = ee.Image('COPERNICUS/S2/20180330T105619_20180330T110002_T30TXM');
+Map.addLayer (SENTINEL_2, {
+  max: 5000.00,
+  min: 0.00,
+  gamma: 1.0,
+  bands: ['B12', 'B11', 'B4']},
+  'Imagen area para incendios');
+
+// Exportacion a Google Drive
+Export.image.toDrive ({
+image: SENTINEL_2.select('B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8'),
+description: 'Descarga de Imagen',
+scale: 30,});
+
+// Exportacion a Google Drive
+Export.image.toDrive ({
+image: SENTINEL_2.select('B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8'),
+description: 'Descarga de Imagen - AOI',
+scale: geometry,});
+
+
+// Mostrar Imagen
+Map.centerObject(SENTINEL_2);
+
+
+
+
+
+
+
+

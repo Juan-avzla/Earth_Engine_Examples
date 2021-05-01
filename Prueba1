@@ -1,0 +1,8 @@
+//declarar variable (texto/numero)
+var pan = 'esto es una variable'
+print (pan);
+
+var number = 5;
+print ('el numero es:', +number);
+
+//Generar Listas

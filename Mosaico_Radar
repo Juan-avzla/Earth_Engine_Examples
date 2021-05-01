@@ -1,0 +1,31 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var sonora = ee.FeatureCollection("users/juanalexis0407/sonora");
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+//Mosaicos radar anuales de ALOS PALSAR y ALOS PALSAR 2
+// http://www.gisandbeers.com/descargar-alos-palsar-mosaicos-sar-anuales
+
+// Llamada a la coleccion de imagenes ALOS PALSAR o ALOS PALSAR 2
+var ALOS = ee.ImageCollection('JAXA/ALOS/PALSAR/YEARLY/SAR')
+  .filterDate('2017-01-01', '2018-01-01'); //Filtro anual
+  
+// Seleccion de banda HH con simbologia
+var BandaHH = ALOS.select('HH');
+var DatosHH = {
+  min: 0.00,
+  max: 20000.00,
+  palette: ['042333', '2c3395', '744992',
+  'b15f82','eb7958', 'fbb43d', 'e8fa5b'],
+};
+
+// Seleccion de banda HV con simbologia
+var BandaHV = ALOS.select('HV');
+var DatosHV = {
+  min: 0.00,
+  max: 10000.00,
+  palette: ['040613', '292851', '3f4b96',
+  '427bb7', '61a8c7', '9cd4da', 'eafdfd'],
+};
+
+
+Map.addLayer(BandaHH, DatosHH, 'BandaHH');
+Map.addLayer(BandaHV, DatosHV, 'BandaHV');

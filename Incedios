@@ -1,0 +1,34 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var geometry = /* color: #98ff00 */ee.Geometry.Point([-8.235906461084966, 40.85940971291867]);
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// Analisis de series temporales de incendios con Earth Engine
+// http://www.gisandbeers.com/analisis-series-temporales-incendios-google-earth-engine/
+
+var Imagenes_Temporales = ee.ImageCollection('COPERNICUS/S2')
+  .filterDate('2016-01-01', '2016-12-30')
+  .filterMetadata('CLOUDY_PIXEL_PERCENTAGE', 'Less_Than', 20)
+  
+// crear una imagen a partir de los valores medios de las imagenes seleccionadas
+// por el rango y metadatos seleccionadas
+var Incendio = Imagenes_Temporales.mean();
+
+// agregar la imagen en falso color para la visualizacion de la zona afectada
+Map.addLayer(Incendio, {
+  max: 5000.0,
+  min: 0.0,
+  bands: ['B11', 'B8', 'B4']},
+  'Vista de Incendio'
+);
+
+// Centrar la vista del mapa al lugar de estudio
+Map.setCenter(-8.19, 40.89, 11);
+
+
+// Extraer los valores de la banda NIR para ser utilizados como datos
+// de control. Imprimir una grafica con este resultado
+var B8 = Imagenes_Temporales.select('B8');
+print(ui.Chart.image.series (B8, geometry));
+
+
+
+

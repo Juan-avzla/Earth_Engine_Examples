@@ -1,0 +1,19 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var sonora = ee.FeatureCollection("users/juanalexis0407/sonora");
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+
+var ETOPO1_DEM = ee.Image("NOAA/NGDC/ETOPO1");
+var ETOPO01 = ETOPO1_DEM.select('bedrock').clip(sonora);
+var elevations = {
+  min: 100.00,
+  max: 5000.00,
+  palette: ['0602ff', '235cb1', '307ef3', '269db1',
+  '30c8e2', '32d3ef', '3ae237', 'b5e22e', 'd6e21f',
+  'fff705', 'ffd611', 'ffb613', 'ff8b13', 'ff6e08',
+  'ff500d', 'ff0000', 'de0101', 'c21301'],
+};
+
+Map.addLayer(ETOPO01, elevations, 'Mapa_DEM');
+
+//PARA EXPORTACION DE DEM
+// Export.image.toDrive {)

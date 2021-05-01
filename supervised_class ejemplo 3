@@ -1,0 +1,65 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var clases = ee.FeatureCollection("users/juanalexis0407/exampleAssetId");
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// Clasificacion supervisada Ciudad Obregon - RSU
+
+// Importacion de area de estudio
+var Cajeme = ee.FeatureCollection("users/juanalexis0407/Cajeme");
+var Ciudad_Obregon = ee.FeatureCollection("users/juanalexis0407/Ciudad_Obregon");
+
+// LLamar a la coleccion de imagenes
+var imageCollection = ee.ImageCollection("COPERNICUS/S2_SR")
+  .filterDate('2020-10-03','2020-10-04')
+  .filterBounds(Ciudad_Obregon);
+
+// Seleccionar bandas para clasificar
+var Bandas = ["B2", 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'];
+
+//Crear un mosaico con las dos imagenes resultantes de la busqueda
+var Imagen = imageCollection.mean();
+
+//Mostrar imagenes en el mapa
+Map.addLayer(Imagen, {bands: ['B4', 'B3', 'B2'], max: 3000}, 'Imagen Satelital');
+
+
+// Creacion de areas o zonas de entrenamiento
+var entrenamiento = Imagen.select(Bandas).sampleRegions({
+  collection: clases,
+  properties: ['landcover'],
+  scale: 10
+});
+
+print(entrenamiento);
+
+
+// crear clasificador de puntos 
+var entrenador_cart = ee.Classifier.cart();
+var clasificador = entrenador_cart.train({
+  features: entrenamiento,
+  classProperty: 'landcover',
+  inputProperties: Bandas
+});
+
+var classify = Imagen.classify(clasificador);
+print(classify);
+
+// añadir imagen clasificada al mapa
+Map.addLayer(classify, {
+  palette: ['d63000', '98ff00', '0b4a8b', 'ffc82d','9a4edc', '769579',
+            '7bd30f', 'e5c35a', 'e643c3'],
+  min: 0,
+  max: 8},
+  'Clasificacion Supervisada'
+);
+
+
+
+//NDVI
+var ndvi = Imagen.normalizedDifference(['B8', 'B4']).rename('NDVI');
+var ndviParams = {min: -1, max: 1, palette: ['red', 'white', 'green']};
+Map.addLayer(ndvi, ndviParams, 'NDVI image');
+
+//NDWI
+var ndwi = Imagen.normalizedDifference(['B3', 'B8']).rename('NDWI');
+var ndwiParams = {min: -1, max: 1, palette: ['red', 'white', 'blue']};
+Map.addLayer(ndwi, ndwiParams, 'NDWI image');

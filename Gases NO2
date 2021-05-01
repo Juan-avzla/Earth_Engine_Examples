@@ -1,0 +1,28 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var sonora = ee.FeatureCollection("users/juanalexis0407/sonora"),
+    ciudad_obregon = ee.FeatureCollection("users/juanalexis0407/Ciudad_Obregon");
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// Areas de Interes (AOI)
+var Ciudad_Obregon = ee.FeatureCollection("users/juanalexis0407/Ciudad_Obregon"),
+    sonora = ee.FeatureCollection("users/juanalexis0407/sonora");
+
+// Llamar a la libreria de imagenes relacionados a NO2
+var NO2 = ee.ImageCollection('COPERNICUS/S5P/OFFL/L3_NO2')
+  .filterDate('2019-01-01', '2019-12-31'); // Periodo de tiempo
+
+// Seleccionar los datos de la columna NO2
+var SentinelNO2_Total = NO2
+  .select('NO2_column_number_density')
+  .filterBounds(sonora);
+  
+// Obtener la media de los datos seleccionados en el periodo de tiempo
+var NO2Total = ee.Image(SentinelNO2_Total.median());
+var NO2Total_Clip = NO2Total.clip(sonora);
+
+// añadir los datos al mapa
+Map.addLayer(NO2Total_Clip, {
+  max: 0.0002,
+  min: 0.0,
+  palette: ["black", "blue", "purple", "cyan", "green", "yellow", "red"]},
+  'NO2 Total'
+);

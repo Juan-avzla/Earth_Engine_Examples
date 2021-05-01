@@ -1,0 +1,39 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var geometry = 
+    /* color: #d63000 */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[-110.27765041587986, 27.485887624464883],
+          [-110.27765041587986, 27.299333261356725],
+          [-110.02427822349705, 27.299333261356725],
+          [-110.02427822349705, 27.485887624464883]]], null, false);
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// Frames y animaciones en Google Earth Engine
+
+// Declarar una variable para obtener imagenes Landsat.
+var ColeccionLandsat= ee.ImageCollection ('LANDSAT/LC08/C01/T1_RT')
+// filtrado de la imagen.
+  .filterBounds (geometry) // Es necesario digitalizar el área de interes.
+  .filterDate ('2020-01-01', '2020-12-31') // Fecha que compone el timelapse
+  .filterMetadata ('CLOUD_COVER', 'Less_Than', 1) // Filtra el exceso de nubosidad.
+  .map(function (image){return image.clip(geometry);});
+
+// Construcción de la composición RGB.
+var ComposicionRGB = { 
+  bands: ['B5','B4','B3'], // Composición de bandas.
+  crs: 'EPSG:4326', // Asigna un sistema mediante código EPSG.
+  min: 0.0,
+  max: 30000.0,
+  framesPerSecond: 4, // Añadir más FPS si se desea acelerar la animación.
+  dimensions: '600',}; // Dimensión máxima de tamaño del gif.
+
+// Generar el GIF animado del timelpase e imprimir la URL de descarga.
+var AnimacionGIF = ColeccionLandsat.getVideoThumbURL (ComposicionRGB);
+print (AnimacionGIF);
+
+// Generar la secuencia de frames que forman el timelpase e imprimir su URL.
+var FramesPelicula = ColeccionLandsat.getFilmstripThumbURL (ComposicionRGB);

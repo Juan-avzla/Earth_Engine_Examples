@@ -1,0 +1,8 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var geometry = /* color: #d63000 */ee.Geometry.Point([-110.855517578125, 29.05107783279085]);
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// llamar a una coleccion de imagenes satelilates, por un rango
+// de fechas, filtar por nubosidad y 
+var SENTINEL_2 = ee.Image('COPERNICUS/S2/20180101T173721_20180101T174214_T13SGC');
+
+Map.centerObject(SENTINEL_2,8);

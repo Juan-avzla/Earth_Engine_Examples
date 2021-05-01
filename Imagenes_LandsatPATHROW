@@ -1,0 +1,31 @@
+// Descarga de imagenes LANDSAT a partir de ROW y PATH
+
+var Landsat = ee.ImageCollection('LANDSAT/LC08/C01/T1_TOA')
+  .filter(ee.Filter.eq('WRS_PATH', 201))
+  .filter(ee.Filter.eq('WRS_ROW', 32))
+  .filterMetadata('CLOUD_COVER', 'Less_Than', 20)
+  .filterDate('2018-01-01', '2018-05-05').first();
+  
+// imprimir el resultado
+print(Landsat);
+  
+// representacion del a imagen en RGB
+Map.addLayer (Landsat, {
+  max: 1.0,
+  min: 0.0,
+  bands: ['B4', 'B3', 'B2']},
+  'Tile_Landsat');
+  
+// centrar la imagen en el mapa
+Map.centerObject(Landsat, 8);
+
+var Titulo_Mapa = ui.Label ({
+  value: 'Imagen Satelital Madrid',
+  style: {position: 'top-center',
+  fontWeight: 'bold',
+  fontSize: '30px'}});
+  
+Map.add(Titulo_Mapa)
+
+
+

@@ -1,0 +1,29 @@
+// Creacion de indices en GGE
+
+
+// Importar las librerias de imagen con su ID
+var Sentinel = ee.Image ('COPERNICUS/S2/20180101T173721_20180101T174214_T13SGC');
+
+// Declarar una variable para realizar NDVI
+var NDVI = Sentinel.expression ('float (NIR - Red) / float (NIR + Red)',{
+    'NIR': Sentinel.select ('B8'),
+    'Red': Sentinel.select ('B4')});
+
+// Representar el indice a traves de una paleta de colores
+var Coleccion_Paletas = require('users/gena/packages:palettes');
+var Paleta_NDVI = Coleccion_Paletas.colorbrewer.RdYlGn[11].reverse();
+
+Map.addLayer (NDVI, {
+  max: 1.0,
+  min: 0.0,
+  'palette': Paleta_NDVI },
+  'NDVI INDEX'
+);
+
+Map.centerObject(NDVI,11);
+print(NDVI, 'Valores NDVI');
+
+
+
+
+

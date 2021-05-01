@@ -1,0 +1,16 @@
+// Lab: Landsat Satellite
+
+// Get a feature collection 
+var countries = ee.FeatureCollection('ft:1tdSwUL7MVpOauSgRzqVTOwdfy17KDbw-1d9omPw');
+var Zambia = countries.filter(ee.Filter.eq('Country', 'Zambia'));
+
+// Load a Landsat 8 collection 
+var collection = ee.ImageCollection('LANDSAT/LC8_L1T_TOA')
+    .filterBounds(Zambia)
+    .filterDate('2017-1-01', '2017-04-30');
+print(collection);
+
+// Compute a minimum image and display
+var median = collection.min();
+Map.centerObject(Zambia, 8);
+Map.addLayer(median, {bands: ['B4', 'B3', 'B2'], max: 0.3}, 'Landsat Satellite Zambia');

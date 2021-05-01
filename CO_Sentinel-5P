@@ -1,0 +1,43 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var sonora = ee.FeatureCollection("users/juanalexis0407/sonora"),
+    imageCollection = ee.ImageCollection("COPERNICUS/S5P/NRTI/L3_CO"),
+    imageVisParam = {"opacity":1,"bands":["CO_column_number_density"],"min":0.02660318884344328,"max":0.036568629074683556,"palette":["000000","0000ff","800080","00ffff","008000","ffff00","ff0000"]};
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+
+// Llamar a la biblioteca de Sentinel-5P Carbon Monoxide
+var Sentinel_5P_CO = ee.ImageCollection("COPERNICUS/S5P/NRTI/L3_CO")
+  .filterDate('2020-02-01', '2020-07-01'); // Periodo de tiempo
+
+// Seleccion de la columna de CO  
+var SentinelCO = Sentinel_5P_CO
+  .select('CO_column_number_density')
+  .filterBounds(sonora);
+
+// Obtener la media de los datos seleccionados en el periodo de tiempo
+var CO_media = ee.Image(SentinelCO.median());
+
+// Cortar los datos al area de estudio
+var CO_media_clip = CO_media.clip(sonora);
+
+// añadir los datos al mapa
+Map.addLayer(CO_media_clip, {
+  max: 0.036568629074683556,
+  min: 0.02660318884344328,
+  palette: ["black", "blue", "purple", "cyan", "green", "yellow", "red"]},
+  'CO Total'
+);
+
+Export.image.toDrive({
+  image: CO_media_clip,
+  description: 'CO_Sentinel5P',
+  scale: 1000,
+  region: sonora
+});
+
+Export.image.toDrive({
+  image: Sentinel_5P_CO.select('B2', 'B3', 'B4'),
+  description: 'CO_Sentinel5P',
+  scale: 1000,
+  region: sonora
+})
+

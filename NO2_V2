@@ -1,0 +1,78 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var Sonora_bounds = ee.FeatureCollection("users/juanalexis0407/sonora");
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// Areas de Interes (AOI)
+var sonora_bounds = ee.FeatureCollection("users/juanalexis0407/sonora");
+
+// Creación de la variabable de imagenes Sentinel-5P.
+var NO2 = ee.ImageCollection('COPERNICUS/S5P/OFFL/L3_NO2')
+  // Filtrar los datos de acuerdo a un periodo de tiempo determinado.
+  .filterDate('2020-12-01', '2020-12-31');
+  
+// Seleccionar los datos de la columna NO2 de la colección de imagenes.
+var SentinelNO2_Total = NO2
+  .select('NO2_column_number_density')
+  .filterBounds(sonora_bounds);
+// Obtener la media de los datos seleccionados en el periodo de tiempo.
+var NO2Total = ee.Image(SentinelNO2_Total.median());
+var NO2Total_Clip = NO2Total.clip(sonora_bounds);
+
+// Crear una composicion.
+var viz = {min: 0.00004,
+  max: 0.00008,
+  palette: ["black", "blue", "purple", "cyan", "green", "yellow", "red"]};
+Map.addLayer(NO2Total_Clip, viz);
+
+// Define la posicion del panel.
+var legend = ui.Panel({
+style: {
+position: 'bottom-left',
+padding: '8px 15px'
+}
+});
+
+// Definir el titulo del panel
+var legendTitle = ui.Label({
+value: 'NO2 (mol/m²)',
+style: {
+fontWeight: 'bold',
+fontSize: '18px',
+margin: '0 0 4px 0',
+padding: '0'
+}
+});
+// Añade eñ titulo al panel.
+legend.add(legendTitle);
+
+// Crea el elemento del gradiente.
+var lon = ee.Image.pixelLonLat().select('latitude');
+var gradient = lon.multiply((viz.max-viz.min)/100).add(viz.min);
+var legendImage = gradient.visualize(viz);
+
+// Crea el texto del valor maximo de NO2.
+var panel = ui.Panel({
+widgets: [
+ui.Label(viz['max'])
+],
+});
+legend.add(panel);
+
+// Define la imagen que conforma el elemento de leyenda.
+var thumbnail = ui.Thumbnail({
+image: legendImage,
+params: {bbox:'0,0,10,100', dimensions:'40x250'},
+style: {padding: '1px', position: 'bottom-center'}
+});
+// Añade el elemento de leyenda al mapa.
+legend.add(thumbnail);
+ 
+// Crea el texto del valor minimo de NO2
+var panel = ui.Panel({
+widgets: [
+ui.Label(viz['min'])
+],
+});
+legend.add(panel);
+
+// Añade la leyenda al visualizador.
+Map.add(legend);

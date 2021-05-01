@@ -1,0 +1,19 @@
+// Cambiar paletas de colores
+
+// Llamar a la libreria de imagenes GTOPOPO30
+var TOPO = ee.Image('USGS/GTOPO30');
+
+// Utilizar una paleta de colores para representar el mapa
+var Coleccion_Paletas = require('users/gena/packages:palettes');
+
+// Seleccionar paleta de colores
+var Paleta = Coleccion_Paletas.colorbrewer.Spectral[11].reverse();
+// usar .reverse() despues de [] para invertir la paleta de colores
+
+
+
+Map.addLayer(TOPO, {
+  min: 0.0,
+  max: 7000.00,
+  palette: Paleta},
+  'DEM');

@@ -1,0 +1,4695 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var RSU_Sitios_Muestreo = ee.FeatureCollection("users/juanalexis0407/RSU_SITIOS_MUESTREO"),
+    RSU_2020CdObregon = ee.FeatureCollection("users/juanalexis0407/RSU_2020CdObregon"),
+    Basureros = /* color: #d63000 */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.93542808634967, 27.410300058265538]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93577140910358, 27.410135763313455]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9357579980585, 27.410359585361796]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93595111710758, 27.410371490777184]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93591624839038, 27.41025719873637]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93614975424403, 27.43653112546433]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9370080611288, 27.435836011745657]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93597809286707, 27.435055193854414]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93608538122767, 27.43608358699674]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93508759947413, 27.43398870195589]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93596736403101, 27.43384586743699]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93580643149012, 27.43472191624314]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93551675291651, 27.43597884368907]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9347764632284, 27.43486474962834]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9346691748678, 27.43373159968877]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9364501616537, 27.435578913781725]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91557933359367, 27.434710406940543]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91465665369255, 27.434672318002644]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91332627802116, 27.434548528863644]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91442061929924, 27.435538838088107]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91586901216728, 27.435872113232566]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91269327669364, 27.43652913842674]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91399146585685, 27.435329350339348]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.961295095589, 27.44710116963388]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96105906119568, 27.447234465843813]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96068891635163, 27.447063084972907]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96055480590088, 27.447186860073042]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96105906119568, 27.447010718542575]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96469613661988, 27.447529621163955]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96459957709534, 27.44747249438944]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9645030175708, 27.44702500029876]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96463176360352, 27.44673936482367]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96348377814515, 27.447034521468527]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96385928740723, 27.44710593021558]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9322639633989, 27.465863874126956]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93201720016953, 27.46602570625057]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93182944553848, 27.465882913212663]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93161486881729, 27.465735360212474]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93163632648941, 27.4660304660153]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97416415408786, 27.478717911712728]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97408368781741, 27.479060574778284]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97418561175998, 27.478894002587875]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97403540805514, 27.478689356409145]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99972366844588, 27.51250851196797]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99982559238845, 27.512289654973138]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99938034569197, 27.512113617509147]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99920868431502, 27.512318201562383]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9994929984706, 27.512608424799108]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9996539310115, 27.51222304623611]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98362336235924, 27.510742537343113]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98353753167076, 27.510599802278477]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98318884449883, 27.510366667941362]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98321834879799, 27.51066403308049]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9834543831913, 27.510495129780054]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.900190076056, 27.516419287350097]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89989503306437, 27.515957800455396]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9004422037034, 27.51629083242956]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90042611044932, 27.516143346965396]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90026517790842, 27.516205195732507]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8999915925889, 27.5162242261154]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "59"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90029199999857, 27.515957800455396]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "60"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9516606549071, 27.549658132354597]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "61"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95177062547671, 27.54952496012154]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "62"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95195301568972, 27.549888805304825]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "63"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95170088804232, 27.549931610541233]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "64"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95187254941928, 27.549762767567326]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "65"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95190473592746, 27.55007191647705]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "66"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95213808811175, 27.54991496406239]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "67"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92625661383575, 27.55612842488989]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "68"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92614664326614, 27.556285368424295]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "69"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92606349478667, 27.556375729751437]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "70"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92618419419234, 27.556594498972323]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "71"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92628075371688, 27.55676808728313]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "72"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84403460393578, 27.55109071823467]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "73"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84434037576348, 27.551280961520266]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "74"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84408824811608, 27.551461692336343]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "75"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84382002721459, 27.551209620326773]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "76"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84522014032036, 27.551961078571313]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "77"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84461932550103, 27.55211802806185]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "78"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84500019918114, 27.552588875187734]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "79"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84455495248467, 27.55235582989289]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "80"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90054193480346, 27.563275756318564]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "81"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9004775617871, 27.56333757856122]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "82"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9003327225003, 27.563713266825502]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "83"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90026298506591, 27.56389873270976]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "84"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90051511271331, 27.56391775483403]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "85"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90052584154937, 27.563656200336546]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "86"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90034345133635, 27.564112731417573]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "87"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9035182911018, 27.617333493176737]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "88"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90390452919995, 27.617024533807047]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "89"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9034807401756, 27.61711959832131]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "90"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90394744454419, 27.617604426060566]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "91"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90354511319195, 27.61766146447701]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "92"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90394208012616, 27.617381025310102]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "93"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9037167745689, 27.617514115173766]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "94"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90372213898694, 27.617143364437]),
+            {
+              "Nombre": "Basurero",
+              "landcover": 1,
+              "color": "#d63000",
+              "system:index": "95"
+            })]),
+    Cuerpo_de_agua = /* color: #142bff */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.97273511876878, 27.49963769047143]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97262783040819, 27.498191153945047]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97086830129442, 27.497220441143664]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96925897588548, 27.496668463380026]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96803588857469, 27.49558353350228]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9679286002141, 27.497201407473753]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9701816557866, 27.49836245531549]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97168369283494, 27.4993902579397]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9723059653264, 27.497829516843098]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96940917959031, 27.497658214643266]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96859378804979, 27.496268753616473]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97013874044237, 27.496401990365584]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97273511876878, 27.49771531540616]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97149057378587, 27.49862892358406]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97282094945726, 27.499199924844497]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85457168180375, 27.83364920215333]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8686479147139, 27.856417014266825]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.87551436979203, 27.877662659220046]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84324203092484, 27.889801157248908]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.82641921598344, 27.894049310074614]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85594497281937, 27.864612256497093]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84804854947953, 27.848221152484022]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.87345443326859, 27.835470802983696]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88718734342484, 27.83486360610461]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90092025358109, 27.840328255692548]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89817367154984, 27.858541766192396]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.87723098356156, 27.867040357418112]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8906205709639, 27.891318373824703]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85903487760453, 27.888283919409606]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83706222135453, 27.878269616435997]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85903487760453, 27.856113474877954]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88135085660844, 27.85459576518573]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85560165006547, 27.881000881816806]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88856063444047, 27.87493130965937]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8796342428389, 27.891318373824703]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88695464744639, 27.796741802799293]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88731942787241, 27.795944571936573]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88547406807017, 27.794445002803208]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88437972679209, 27.79281253693638]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88611779823374, 27.795583917958577]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88815627708506, 27.79619133449515]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89356133838947, 27.806278719612166]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89396524751174, 27.805349814473498]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.896711829543, 27.80382544011262]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89770813871118, 27.802967970136123]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8934267020154, 27.80582617707518]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89838426575227, 27.801453424928948]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89847009644075, 27.799631253364225]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89831989273591, 27.79849238062061]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89709680542512, 27.803370468278988]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89687510160023, 27.789108902949717]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8975188317638, 27.787210591329607]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89764757779652, 27.78538818099324]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89777632382923, 27.782502635495764]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89945002225453, 27.779009504295647]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90026541379505, 27.777414776666014]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89850588468128, 27.779465136466786]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89902086881214, 27.777680566227957]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89882774976307, 27.78048080964522]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8985809865337, 27.781638855341523]),
+            {
+              "Nombre": "Cuerpo de agua",
+              "landcover": 2,
+              "color": "#142bff",
+              "system:index": "59"
+            })]),
+    Mancha_urbana = /* color: #ff74d7 */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.93641332208149, 27.44862859882022]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93010476647848, 27.47042960635643]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9302549701833, 27.450799372702033]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94143441735737, 27.466107827828537]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96799901544087, 27.485468835827064]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92501929818623, 27.448723809096787]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9212199776884, 27.453756675006105]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92319408352336, 27.442102858325057]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93031803066691, 27.439208255485784]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92276493008097, 27.438598855738796]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91890254909953, 27.44347395948207]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.908002051663, 27.45939271971984]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91615596706828, 27.44781566740068]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91615596706828, 27.452004872699074]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91521182949504, 27.45962120194288]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9255973428007, 27.45687938401663]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94688335354289, 27.497466551435767]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93787113125285, 27.455965429557008]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9504882424589, 27.43997000043699]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94070354397257, 27.46053512610022]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94799915249308, 27.4489581937157]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9464542001005, 27.44705397661631]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94113269741496, 27.450710044414112]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94774166042765, 27.45581310307728]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94473758633097, 27.445149726645834]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93572536404093, 27.442712238720585]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9395019143339, 27.442636066355213]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93486705715617, 27.44065556639709]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90431133205851, 27.454137497912473]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89220920498332, 27.45581310307728]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89100757534464, 27.46182983902104]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9226790993925, 27.49594385084734]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90937534267863, 27.487644762457574]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9050838082548, 27.475537631145972]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92628398830851, 27.46327685311545]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92370906765422, 27.48650263710994]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.00018421108683, 27.485817356215783]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92585483486613, 27.469597797222217]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93684116299113, 27.480334955559098]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9504882424589, 27.484979784887603]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93357959682902, 27.48939599831746]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9504882424589, 27.476146826777633]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93735614712199, 27.495106356545705]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9376994698759, 27.47157777743878]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94190517361125, 27.506906824916804]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9596721261259, 27.48406606344674]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94911495144328, 27.469597797222217]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98447719509562, 27.48596964122744]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.962933692288, 27.473405419909678]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96190372402629, 27.468607793773966]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96507945949992, 27.467617781432658]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94130435879191, 27.489395998317487]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95641055996379, 27.49609612185405]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93701282436808, 27.562161845870946]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94216266567668, 27.565814091074373]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95847049648722, 27.514823849184953]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9306983494815, 27.58428760758596]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8994130635318, 27.48877275401766]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92953963518707, 27.57443553482286]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93314452410308, 27.50415206381083]),
+            {
+              "Nombre": "Mancha_Urbana",
+              "landcover": 3,
+              "color": "#ff74d7",
+              "system:index": "59"
+            })]),
+    Suelo_desnudo = /* color: #ffc82d */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.8577687083582, 27.50826300044563]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8606869517664, 27.508757825054474]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86072986711063, 27.508148809835248]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85691040147343, 27.50628367975634]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85875576127567, 27.50632174395151]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85982864488163, 27.50620755132647]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85862701524296, 27.50438045320867]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85738247026005, 27.50460884213246]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85798328507938, 27.50369528359329]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8590132533411, 27.503200436217988]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86368029702702, 27.497100307922963]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86292927850285, 27.496510261981385]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90699447266448, 27.481402358503313]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90722514263976, 27.481145366767414]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90612543694365, 27.48094072477108]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90517593495238, 27.481116812093067]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90462339989531, 27.481116812093067]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90357197396148, 27.480983556848297]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90864671341765, 27.480964520371582]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9656544575309, 27.463853455208074]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.965311134777, 27.46354406396181]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80891053549168, 27.47797798005865]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80931286684391, 27.478311126957703]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8096722828519, 27.477083237686404]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8097259270322, 27.478177868318973]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81338446012852, 27.470448591491557]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81239204279301, 27.46999167145566]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81363122335789, 27.469905998738014]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81318061224339, 27.469349124449984]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81209163538334, 27.46978700874194]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80702762476322, 27.465055862397286]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80449561945316, 27.461590668636536]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80460290781376, 27.46081003303135]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80468873850224, 27.45943914737267]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81344346872685, 27.456468836637278]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81410865656254, 27.45624034788186]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81423740259525, 27.45001384707143]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81591110102055, 27.44850953268653]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81634025446293, 27.447367001724412]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81681232324955, 27.44852857476898]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.82467222638371, 27.44479626379325]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.82301998563054, 27.444377323046375]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.82411432690861, 27.443577522657492]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.832289699986, 27.445767438496944]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83256864972356, 27.44496764818574]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83480024762395, 27.443996466441444]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83447838254216, 27.44372986603571]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83323383755925, 27.44363465144896]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8319463772321, 27.443920294962687]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83666706509831, 27.44574839593787]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83722496457341, 27.44685285893072]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84168816037419, 27.446738604651127]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83924198575261, 27.44730987486568]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83995008893254, 27.44662435025322]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84323311276677, 27.444110723560964]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8446064037824, 27.443558479720412]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84308290906193, 27.443710823124942]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83748245663884, 27.43611243945235]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83634520001652, 27.432417798207638]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83630228467229, 27.431370325869324]),
+            {
+              "Nombre": "Suelo desnudo",
+              "landcover": 4,
+              "color": "#ffc82d",
+              "system:index": "59"
+            })]),
+    Tierra_de_cultivo = /* color: #d1ff33 */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.8545842213178, 27.43706464653177]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85514212079289, 27.439959305601068]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84638739056828, 27.434169911535772]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84582949109318, 27.42914203346968]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85037851758244, 27.429370578349904]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85677290387395, 27.433446215923848]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86102152295354, 27.437407439069133]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86612844891789, 27.438550073170354]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.87501192517522, 27.435160224157396]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.87295198865178, 27.434169911535772]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86565638013127, 27.429827666690954]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8728661579633, 27.429980029050725]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86213732190373, 27.42563761939399]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86677217908147, 27.425409066786216]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88144922681096, 27.42510432923993]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88153505749943, 27.4371408227432]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88771486706975, 27.443767951847406]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89475298352482, 27.44224450912502]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88179254956486, 27.417409427485055]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.87355280347111, 27.416723717153825]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.901447777226, 27.432341618736373]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90445185132268, 27.424875775528275]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9029068989301, 27.416799907400865]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8999886555219, 27.41177123837235]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91801310010197, 27.41504751842322]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92007303662541, 27.42426629665102]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92393541760686, 27.43211308000714]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86359644360783, 27.407123325572794]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89380884595158, 27.404227805651367]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89432383008244, 27.395388380851635]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88711405225041, 27.394931149997866]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88951731152775, 27.394473917253144]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95440531201604, 27.401027405894972]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9552636189008, 27.405142188559644]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94788217969182, 27.424494851624235]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97792292065861, 27.430741837695308]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98066950268986, 27.414895135459155]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95938349194768, 27.423580628892918]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94324732251408, 27.42510432923993]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94925547070744, 27.435007868947817]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.01088190503361, 27.450394682901788]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99989557690861, 27.45679252823035]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.05070734448674, 27.4587727384649]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.05053568310979, 27.453593651961175]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.06564188428166, 27.424494851624235]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.05894709058049, 27.42419011155483]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.08229303784611, 27.419771286041133]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.0896744770551, 27.4249519601514]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.08297968335393, 27.452832001077393]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.05826044507268, 27.44932833926319]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.10426569409611, 27.4249519601514]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.1090722126508, 27.43013239120022]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.09396601147893, 27.4557262464511]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.10563898511174, 27.453136662062132]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.11078882642033, 27.414895135459155]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.06787348218205, 27.414590368900406]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.03165293164494, 27.424799590852604]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.02684641309025, 27.438359634975097]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.03027964062932, 27.39904615960501]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.07388163037541, 27.393407033495247]),
+            {
+              "Nombre": "Tierra de cultivo",
+              "landcover": 5,
+              "color": "#d1ff33",
+              "system:index": "59"
+            })]),
+    Vegetacion_densa = /* color: #bf04c2 */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.86891794629338, 27.51542213993925]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8783593220258, 27.519228178087644]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88522577710393, 27.540387347761563]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88316584058049, 27.539359928223437]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88312292523625, 27.535554586995485]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.881277565434, 27.532548274257337]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90359354443791, 27.53384214045245]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90578222699406, 27.535592641060024]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89788580365422, 27.535516532917732]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88883066601994, 27.539702402470247]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88260794110539, 27.545295997393286]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88479662366154, 27.54677996457041]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88874483533147, 27.547579015515954]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89578295178654, 27.556938893692042]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89209223218205, 27.558346611227716]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88943148083928, 27.558270518849376]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89200640149357, 27.56036304003695]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89792871899846, 27.558879256399333]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8869853062177, 27.557775917104824]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88192129559758, 27.565080577839893]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89329386182072, 27.569683786208497]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88814402051213, 27.571585882049998]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90912962384465, 27.5698739972763]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89299345441106, 27.57740609050786]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86840296216252, 27.569075108575966]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86587095685246, 27.568618598136002]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.89604044385197, 27.580259021094783]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91033125348332, 27.592202484795735]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8792605442548, 27.586991643079]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.88535452313664, 27.59083323650719]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.87810182996037, 27.588170760327838]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.90625429578068, 27.597375046217827]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91548109479191, 27.603574191628724]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94436312146428, 27.611065942283446]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94161653943303, 27.610875802663898]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9492125553632, 27.608213813338025]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95496321149113, 27.608175784450477]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95564985699895, 27.611978607863282]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96049929089787, 27.609772986362398]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96517706341984, 27.611712414521325]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96543455548527, 27.612967320327186]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96783781476262, 27.61076171873375]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.96942568249943, 27.609734958016073]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95547819562199, 27.62266383493515]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95650816388371, 27.623614427408537]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95238829083684, 27.624641058009747]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9734168095136, 27.626123951882665]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9743180317426, 27.628709462386645]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97805166669133, 27.630306364837583]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98139906354191, 27.629812087997074]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98740721173527, 27.626314065029128]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98461771435979, 27.624641058009747]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98066950268986, 27.62137101592696]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98959589429143, 27.62490721992752]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99054003186467, 27.63106678638767]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98414564557316, 27.632929796857816]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98242903180363, 27.633918320147824]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99157000012639, 27.635058912848898]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98976755566838, 27.630040216046954]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99032545514348, 27.63357614001942]),
+            {
+              "Nombre": "Vegetacion densa",
+              "landcover": 6,
+              "color": "#bf04c2",
+              "system:index": "59"
+            })]),
+    Area_cultivo_2 = /* color: #7abeff */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.98178530164006, 27.62570570179835]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97749376721623, 27.62619999718086]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97946787305119, 27.623652450935786]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91290617413762, 27.643004712084956]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91685438580754, 27.626428132758527]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95255995221379, 27.604981310771986]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94947004742863, 27.604981310771986]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98397398419621, 27.60087399348007]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.99667692609074, 27.597831436977998]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97436094708684, 27.57029246046496]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98654890485051, 27.564205565982075]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98225737042668, 27.561314172846526]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.01092482037785, 27.542289951167128]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95702314801457, 27.54122449731906]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95307493634465, 27.54518184524161]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95702314801457, 27.53604928880693]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.01744795270207, 27.510930845526676]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.01281309552434, 27.516411722528286]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.0440554661298, 27.529199373377967]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.0517802280927, 27.528286019067107]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.05160856671574, 27.52204456151892]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.0821642918134, 27.52722042944668]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.07976103253606, 27.52341466791758]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.08233595319035, 27.522957967681602]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.11117506451848, 27.51260558691734]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.1151232761884, 27.507885795862467]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.12456465192082, 27.492354731804607]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.13228941388371, 27.49463884925511]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.06448316998723, 27.471490933233095]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.07340956158879, 27.461590668636536]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.03976393170598, 27.462352259021888]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.03203916974309, 27.477735258112087]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.06894636578801, 27.47529849050685]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.0668005985761, 27.478268293841413]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.08010435528996, 27.472023999171792]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.08147764630559, 27.47876325328074]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.02826261945012, 27.45648787734555]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.01942205853703, 27.45724950297939]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98268652386906, 27.460524433258144]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.97590589947941, 27.456868690820045]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98011160321477, 27.450318515840916]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98817968793156, 27.451461016231157]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.00397253461125, 27.45245117366296]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.98938131757023, 27.462656893702857]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.18601942487004, 27.440644871627597]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.05830336041691, 27.393711858476586]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.06551313824895, 27.393102207673532]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.04869032330754, 27.38852971950517]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.08782911725285, 27.375420872321733]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.17331648297551, 27.3757257468753]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-110.00440168805363, 27.3757257468753]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9916987461591, 27.396455245489946]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.91891432233098, 27.378774446208553]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95461988873723, 27.38852971950517]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8983149570966, 27.37907931152151]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84544325299504, 27.380603625484724]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83617353863957, 27.368103631045365]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83617353863957, 27.3595662381398]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83514357037785, 27.338524853034784]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9144511265302, 27.35773671114987]),
+            {
+              "Nombre": "Area de cultivo con vegetacion",
+              "landcover": 7,
+              "color": "#7abeff",
+              "system:index": "59"
+            })]),
+    Matorral = /* color: #00ff00 */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.8682742161298, 27.55423754733423]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.86552763409856, 27.543127086227834]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.82999372906926, 27.54556235195255]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8408083958173, 27.528514358356247]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.82707548566106, 27.528971035511677]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80321455426457, 27.53734311378523]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.7936015171552, 27.542518261361746]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80407286114934, 27.552259054321397]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83651686139348, 27.510854720312217]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85522795148137, 27.520446082477154]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8323969883466, 27.50369871496952]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84921980328801, 27.494410439642554]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83857679791691, 27.470957864715732]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85848951764348, 27.476745327772495]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.82467222638371, 27.48694879839234]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8320536655927, 27.46181914630456]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.84784651227238, 27.46654091209215]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83909178204777, 27.456944853357122]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.85711622662785, 27.464408526781657]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.83342695660832, 27.414895135459155]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8243289036298, 27.410628327123653]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.82089567609074, 27.4062089590571]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80304289288762, 27.368713419629994]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.79033995099309, 27.36032853213067]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.80630445904973, 27.35926131907399]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.8129992527509, 27.351485599205635]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.79445982403996, 27.339897239099805]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.79068327374699, 27.35255288719778]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.79840803570988, 27.32769765603226]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.76974058575871, 27.341117123556504]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.77660704083684, 27.35621208223445]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81420088238957, 27.324800057762186]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.81420088238957, 27.320377261792466]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.76373243756535, 27.307717939999463]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.75343275494816, 27.30237923881355]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.75909758038762, 27.299480979201224]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.73969984479191, 27.298260636726205]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.73969984479191, 27.2897178638136]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.72751188702824, 27.306345155651137]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.7693972630048, 27.292006171003386]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.73729658551457, 27.31625932768654]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.72476530499699, 27.316869401644993]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.71343565411809, 27.290785746369988]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.72442198224309, 27.289412752625722]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.7005610508466, 27.322512426696083]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.71789884991887, 27.328460169307615]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.71480894513371, 27.333950110080576]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.74914122052434, 27.290328083674627]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.76476240582707, 27.2834629169284]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.7635607761884, 27.27751276254052]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.77574873395207, 27.279191043478452]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.73214674420598, 27.27873333300938]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.70450926251652, 27.28407317115479]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.71360731549504, 27.303446999595128]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.72407865948918, 27.299480979201224]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.7364382786298, 27.287429509472926]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.74622297711613, 27.29673518976815]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.75669432111027, 27.295819911532636]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.75875425763371, 27.30848059063292]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.7635607761884, 27.29124340717928]),
+            {
+              "Nombre": "Matorral",
+              "landcover": 8,
+              "color": "#00ff00",
+              "system:index": "59"
+            })]),
+    Calle = /* color: #ccb4ff */ee.FeatureCollection(
+        [ee.Feature(
+            ee.Geometry.Point([-109.93279743619206, 27.447424128553582]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "0"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.932786707356, 27.44610068274865]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "1"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9363164944196, 27.446119725246916]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "2"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92918181843999, 27.4461578102336]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "3"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92922473378422, 27.447252747977352]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "4"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9292032761121, 27.448633306163668]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "5"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93280816502812, 27.449509237570833]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "6"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93276524968388, 27.452232197304202]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "7"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9292032761121, 27.45244165296073]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "8"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92435384221318, 27.452327404470108]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "9"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93976045079472, 27.449490195657663]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "10"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94486737675908, 27.44943306989851]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "11"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.932786707356, 27.45426961271468]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "12"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9292032761121, 27.456154664476504]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "13"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92433238454106, 27.454974130780563]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "14"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92677855916264, 27.45501221270997]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "15"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94302201695683, 27.45861089569371]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "16"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.932786707356, 27.458934580998545]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "17"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93280816502812, 27.461257471188492]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "18"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92916036076787, 27.461295550947824]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "19"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93285108037236, 27.463865904292646]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "20"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94285035557988, 27.46495114659956]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "21"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93789363332036, 27.464932107352915]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "22"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93280816502812, 27.464913068102987]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "23"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95068240590336, 27.46495114659956]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "24"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95297837682011, 27.46497018584289]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "25"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92922473378422, 27.464437085786034]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "26"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92450404591801, 27.46430381036896]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "27"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92922473378422, 27.467578531094553]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "28"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93158507771733, 27.468758929825412]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "29"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93282962270024, 27.469044508264222]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "30"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93978190846684, 27.468682775450098]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "31"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9453394455457, 27.4690064311818]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "32"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93280816502812, 27.471291032841275]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "33"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93780780263188, 27.47405152998843]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "34"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94285035557988, 27.47391826619761]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "35"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.932786707356, 27.47490822193815]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "36"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93149924702885, 27.476945218269307]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "37"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93276524968388, 27.476983292608537]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "38"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9292032761121, 27.47483207181234]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "39"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.92922473378422, 27.47658351139039]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "40"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95302129216435, 27.47405152998843]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "41"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95306420750859, 27.47574586984844]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "42"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95304274983647, 27.47308060439326]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "43"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94278598256352, 27.478487218483057]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "44"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93982482381108, 27.478449144663603]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "45"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93980336613896, 27.480562221743366]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "46"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93497538991215, 27.482770439161737]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "47"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94525361485722, 27.482675258289422]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "48"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95160508580449, 27.482675258289422]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "49"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95334315724614, 27.482637185917458]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "50"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93986773915532, 27.48269429447047]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "51"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93285108037236, 27.482675258289422]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "52"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94830060429814, 27.481837663066425]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "53"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94875121541264, 27.484959576523817]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "54"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93885922856572, 27.485092826958365]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "55"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.9359195274854, 27.48505475542207]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "56"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.93495393224003, 27.484978612310044]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "57"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.94079041905644, 27.48773876648702]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "58"
+            }),
+        ee.Feature(
+            ee.Geometry.Point([-109.95327878422978, 27.48777683709543]),
+            {
+              "Nombre": "Calle",
+              "landcover": 9,
+              "color": "#ccb4ff",
+              "system:index": "59"
+            })]);
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// Ingresar el Area de Interes (Ciudad Obregon)
+var Ciudad_Obregon = ee.FeatureCollection("users/juanalexis0407/Ciudad_Obregon");
+
+// Seleccion de imagenes satelitales Sentinel-2A
+
+// ID de imagenes a utilizar
+// S2A_MSIL2A_20201003T175201_N0214_R141_T12RWR_20201003T221250
+// S2A_MSIL2A_20201003T175201_N0214_R141_T12RXR_20201003T221250
+
+// Seleccion de bandas Sentinel2
+var BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B9', 'B11', 'B12'];
+
+// Funcion para crear una mascara de nubes
+function maskS2sr(image) {
+  var qa = image.select('QA60');
+// Excluir los pixeles identificados como "nubes" y "cirrus" de la imagen
+  var clipcloud = 1 << 10;
+  var clipcirrus = 1 << 11;
+  var Mask = qa.bitwiseAnd(clipcloud).eq(0)
+        .and(qa.bitwiseAnd(clipcirrus).eq(0));
+  return image.updateMask(Mask).select(BANDS).divide(10000);
+}
+
+// Realizar la llamada a la coleccion de imagenes Sentinel
+var S2A_SR = ee.ImageCollection('COPERNICUS/S2_SR')
+// Filtrar los resultados por fecha y utilizando como delimitación,
+// el área de interes (Ciudad Obregon)
+   .filterDate('2020-10-03','2020-10-04')
+   .filterBounds (Ciudad_Obregon)
+   .map(maskS2sr);
+print(S2A_SR);
+
+// Crear las propiedades de visualizacion
+var rgbVis = {
+  min: 0.0,
+  max: 0.3,
+  bands: ['B4', 'B3', 'B2'],};
+// Mostrar el mosaico de imagenes en Earth Engine
+Map.addLayer(S2A_SR.median(), rgbVis, 'SentinelCloudless');
+
+
+// Ingresar los puntos de muestreo para formar la clasificacion
+// con imagenes sentinel
+
+Map.addLayer(RSU_Sitios_Muestreo.draw({color: "red"}),
+            {},"Sitios Muestreo");
+
+Map.addLayer(RSU_2020CdObregon.draw({color: "blue"}),
+            {}, "RSU 2020");
+
+
+// Unir las geometrias dentro de una sola variable
+
+var Clases_de_clasificacion = Basureros.merge(Cuerpo_de_agua).merge(Mancha_urbana)
+    .merge(Suelo_desnudo).merge(Tierra_de_cultivo).merge(Vegetacion_densa)
+    .merge(Area_cultivo_2).merge(Matorral).merge(Calle);
+    
+  print(Clases_de_clasificacion);
+
+// Unir solo cuatro clases para crear el asset de calsificacion
+// (Claes basurero, vegetacion, Cuerpo de agua)
+// var Tres_clases = Basureros.merge(Cuerpo_de_agua).merge(Vegetacion_densa);
+
+
+// Exportar clases en fomato de asset
+Export.table.toAsset({
+  collection: Clases_de_clasificacion,
+  description:'exportacion_de_nueve_clases_para_clasificacion',
+  assetId: 'clases_para_clasificacion_supervisada_GEETF',
+});
+
+//Observacion de los puntos demo
+var points = ee.FeatureCollection('GOOGLE/EE/DEMOS/demo_landcover_labels');
+print(points)

@@ -1,0 +1,60 @@
+// Analisis de severidad de incendios NBR
+
+// trabajar con bandas del infrarrojo cercando y de onda corta para la deteccion
+// de incendios forestales
+
+// agragar la imagen correspondiente despues del incendio
+
+var Post_Incendio = ee.Image ('COPERNICUS/S2/20190630T105039_20190630T105035_T31TBF');
+
+
+Map.addLayer(Post_Incendio, {
+  max: 4000.00,
+  min: 0.0,
+  gamma: 0.5,
+  bands: ['B11', 'B8', 'B4']},
+  'Post_Incendio');
+  
+// Calcular el Indice NBR (Normalized Burn Ratio) con las bandas NIR 
+// y SWIR (B8 Y B12) con la siguiente formula:
+var NBR_Post_Incendio = Post_Incendio.normalizedDifference(['B8', 'B12']);
+Map.addLayer(NBR_Post_Incendio, {
+  max: 1.0,
+  min: 0.0,
+  palette: ['#7F0010', '#D99143', '#C04529', '#E02E20', '#EC6521', '#F6D53B']},
+  'Mapa NBR Post Incendio');
+
+  
+// Repetir el proceso anterior con una imagen pre incendio.
+var Pre_Incendio = ee.Image ('COPERNICUS/S2/20190610T105039_20190610T105331_T30TYL');
+Map.addLayer(Pre_Incendio, {
+  max: 4000.0,
+  min: 0.0,
+  gamma: 0.5,
+  bands: ['B11', 'B8', 'B4']},
+  'Pre Incendio');
+
+var NBR_Pre_Incendio = Pre_Incendio.normalizedDifference(['B8', 'B12']);
+Map.addLayer(NBR_Pre_Incendio, {
+  max: 1.0,
+  min: 0.0,
+  palette: ['#7F0010', '#D99143', '#C04529', '#E02E20', '#EC6521', '#F6D53B']},
+  'NBR Pre Incendio');
+  
+//Analizar la severidad con una diferencia entre imágenes y representar
+// los datos en en el visor
+var Indice_Severidad = NBR_Pre_Incendio.subtract(NBR_Post_Incendio);
+Map.addLayer(Indice_Severidad, {
+  max: 1.0,
+  min: 0.0,
+  palette: ['011301', '011D01', '012E01', '023B01', '004C00', '056201',
+        '207401', '3E8601', '529400', '74A901', '99B718', 'FCD163',
+        'F1B555', 'DF923D', 'CE7E45', '66A000']},
+  'Indice de Severidad');
+  
+// Mostrar el proyecto y centrarlo sobre un mapa
+Map.centerObject(Indice_Severidad,9);
+
+
+
+

@@ -1,0 +1,28 @@
+//declarar variable (texto/numero)
+var pan = 'esto es una variable'
+print (pan);
+
+var number = 5;
+print ('el numero es:', +number);
+
+//Generar Listas
+//las listas son generadas de la siguiente manera:
+var milista = [1, 2, 3, 4, 5];
+print ('lista creada: '+ milista)
+
+var stringlista = ['a', 'b', 'c', 'd', 'e'];
+print ('lista creada: ', stringlista);
+
+//Objetos
+var primerobjeto = {
+  aby: 'aaa',
+  nota: 12,
+  item: ['pais', 'ciudad', 'continente']
+};
+print ('Diccionario: ', primerobjeto  )
+
+//Funciones
+var test = function(element) {
+  //return argument
+  return element;
+};

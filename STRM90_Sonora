@@ -1,0 +1,67 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var sonora = ee.FeatureCollection("users/juanalexis0407/sonora");
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+// Agregar leyendas en un mapa
+
+// Importacion de la biblioteca de imagenes
+var DEM_STRM = ee.Image("CGIAR/SRTM90_V4").select('elevation');
+var DEM_STRM_90 = DEM_STRM.clip(sonora);
+var Rampa_color = { min: 0.00, max: 3000.00,
+  palette: ['9e0142','d53e4f','f46d43','fdae61','fee08b',
+            'e6f598','abdda4','66c2a5','3288bd','5e4fa2'],};
+
+// añadir capa al mapa
+Map.addLayer(DEM_STRM_90, Rampa_color, 'DEM_SONORA');
+
+// establecer etiquetas para leyenda
+var Etiquetas = [
+  '0.00 - 300.00 m',
+  '300.00 - 600.00 m',
+  '600.00 - 900.00 m',
+  '900.00 - 1200.00 m',
+  '1200.00 - 1500.00 m',
+  '1500.00 - 1800.00 m',
+  '1800.00 - 2100.00 m',
+  '2100.00 - 2400.00 m',
+  '2400.00 - 2700.00 m',
+  '2700.00 - 3000.00 m',
+  ];
+  
+// Añandir titulo a mapa
+var Titulo_Mapa = ui.Label ({
+  value: 'Digital terrain model - STRM 90',
+  style: {position: 'top-center', fontWeight: 'bold', fontSize: '25px'}});
+Map.add(Titulo_Mapa);
+
+// agregar un titulo de leyenda
+var Titulo = ui.Label ({
+  value: 'Elevation', // Titulo de la leyenda
+  style: { fontWeight: 'bold', fontSize: '15px',
+           margin: '0px 0px 10px 30px', }});
+
+// agregar leyenda al mapa
+var Leyenda = ui.Panel ({
+  style: {position: 'bottom-left', padding: '5px 10px'}});
+Leyenda.add(Titulo);
+
+// crear la simbologia
+var Simbologia = ['9e0142','d53e4f','f46d43','fdae61','fee08b',
+                  'e6f598','abdda4','66c2a5','3288bd','5e4fa2'];
+var Simbolos = function(Simbolo, Texto) { 
+var Texto_Leyenda = ui.Label({
+  value: Texto,
+  style: {fontSize: '10px', margin: '6px 0px 10px 15px'}});
+
+var Caja_Leyenda = ui.Label ({
+  style: {backgroundColor: '#' + Simbolo,
+  padding: '10px', margin: '0px 0px 6px 0px'}});
+  
+// Añadir la leyenda al visor
+return ui.Panel ({
+  widgets: [Caja_Leyenda, Texto_Leyenda],
+  layout: ui.Panel.Layout.Flow ('horizontal')})};
+  for (var i = 0; i < 10; i++) {Leyenda.add(Simbolos(Simbologia[i], Etiquetas[i]));}
+
+Map.centerObject(DEM_STRM_90);
+Map.centerObject(sonora, 6);
+Map.add(Leyenda);

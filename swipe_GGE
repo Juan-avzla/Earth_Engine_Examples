@@ -1,0 +1,33 @@
+// efecto de cortinilla Google Earth Engine
+
+var SENTINEL_2 = ee.ImageCollection('COPERNICUS/S2')
+  .filterDate('2018-10-01', '2018-12-30')
+  .filterMetadata('CLOUDY_PIXEL_PERCENTAGE', 'Less_Than', 10);
+  
+// Crear una imagen
+Map.addLayer(SENTINEL_2, {bands: ['B11', 'B8', 'B2'],
+  gamma: 1.0,
+  min: 0.0,
+  max: 5000.0,},
+  'Agriculutra');
+
+// Linkeo de mapas
+var Mapas_Vinculados = ui.Map ();
+Mapas_Vinculados.addLayer(SENTINEL_2, {bands: ['B8', 'B4', 'B3'],
+  gamma: 1.0,
+  min: 0.0,
+  max: 5000.0 },
+  'Falso Color');
+var SWIPE = ui.Map.Linker([ui.root.widgets().get[0], Mapas_Vinculados]);
+
+// incorpar el widget con las dos imagenes
+var SWIPE_2 = ui.SplitPanel({
+  firstPanel: SWIPE.get(0),
+  secontPanel: SWIPE.get(1),
+  orientation: 'horizontal',
+  wipe: true,
+  style: {stretch: 'both'}});
+
+// Centrar el mapa con una coordenada
+ui.root.widgets().reset([SWIPE_2]);
+Mapas_Vinculados.setCenter(-109.59, 27, 10);
